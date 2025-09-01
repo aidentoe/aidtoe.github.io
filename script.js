@@ -1,15 +1,24 @@
-document.getElementById('upload').addEventListener('change', function (e) {
-  const file = e.target.files[0];
-  if (!file) return;
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
 
-  const name = file.name.toLowerCase();
-  let type = 'Garbage 🗑️';
+// Fade-in sections on scroll
+const sections = document.querySelectorAll('section');
 
-  if (name.includes('plastic') || name.includes('can') || name.includes('paper')) {
-    type = 'Recycle ♻️';
-  } else if (name.includes('banana') || name.includes('food') || name.includes('leaf')) {
-    type = 'Compost 🌿';
-  }
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
 
-  document.getElementById('result').textContent = `Classification: ${type}`;
+sections.forEach(section => {
+  observer.observe(section);
 });
