@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-        <!-- Header Section -->
-        <header class="profile-header">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="profile-description">
-                <h1>Aiden's portfolio</h1>
-                <p>
-                    Aiden To is a student at St. Mary’s High School in Kitchener with interests in programming, event organization, and music education. 
-                    He has participated in two hackathons, collaborating on projects designed to support students in their daily lives. 
-                    In addition to his technical pursuits, Aiden teaches piano and continues to develop his skills in web design. 
-                    He is passionate about building, creating, and exploring new opportunities to grow and connect with others.
-                </p>
-            </div>
-        </header>
 
-        <!-- Action Buttons -->
-        <div class="main-buttons">
-            <a href="#projects" class="main-btn">Projects</a>
-            <a href="#resume" class="main-btn main-btn-alt">Resume</a>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p>Creative Web Developer who loves to design, code, and organize events.</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <img src="ecosnap-placeholder.png" alt="EcoSnap Project Screenshot">
+        <div class="project-info">
+          <h3>EcoSnap</h3>
+          <p>EcoSnap is a user-friendly web app that helps people quickly classify everyday items into recycling, compost, or garbage. Built with HTML, CSS, and JavaScript, it’s designed to make sustainability simple and accessible.</p>
+          <div class="project-links">
+            <a href="https://aidentoe.github.io/EcoSnap/" target="_blank">View Project</a>
+            <a href="https://github.com/aidentoe/EcoSnap" target="_blank">Code</a>
+          </div>
         </div>
+      </div>
+      <!-- Add more project cards here if needed -->
+    </div>
+  </section>
 
-        <!-- Placeholder Sections -->
-        <section id="projects" class="section">
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <a href="https://devpost.com/software/taskify-4stjcx?ref_content=user-portfolio&ref_feature=in_progress" target="_blank">
-                Taskify &ndash; A Task Management App
-            </a>
-            <p>A simple and effective task management web app built with javascript, html, and css.</p>
-        </li>
-        <!-- Add more projects here if you want -->
-    </ul>
-</section>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a creative web developer passionate about combining design and technology to build user-friendly tools. Beyond coding, I love organizing events that bring people together.</p>
+    </div>
+  </section>
 
-        <section id="resume" class="section">
-            <h2>Resume</h2>
-            <p>STILL WORKING ON MY RESUME</p>
-        </section>
-    </main>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Connect</h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
