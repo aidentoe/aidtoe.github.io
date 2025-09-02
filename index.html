@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiden Toe | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiden To - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header>
-    <div class="logo">Aiden Toe</div>
-    <nav>
-      <button class="menu-toggle">☰</button>
-      <ul class="menu">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="project-ecosnap.html">EcoSnap</a></li>
-        <li><a href="project-fake.html">Fake Website</a></li>
-        <!-- Add more project pages here -->
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        <li><a href="https://www.instagram.com/">Instagram</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Intro Section -->
-  <section id="intro">
-    <div class="intro-content">
-      <h1>Hi, I’m Aiden</h1>
-      <p>A creative web developer who loves to design, code, and organize events.</p>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>Aiden To</h1>
+      <p>Portfolio</p>
+      <a href="#projects" class="btn">See My Work</a>
     </div>
   </section>
 
-  <!-- About Me Section -->
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <!-- EcoSnap Project -->
+      <div class="project-card">
+        <img src="ecosnap-placeholder.png" alt="EcoSnap Project Screenshot">
+        <div class="project-info">
+          <h3>EcoSnap</h3>
+          <p>EcoSnap is a user-friendly web app that helps people quickly classify everyday items into recycling, compost, or garbage. Built with HTML, CSS, and JavaScript, it’s designed to make sustainability simple and accessible.</p>
+          <div class="project-links">
+            <a href="https://aidentoe.github.io/EcoSnap/" target="_blank">View Project</a>
+            <a href="https://github.com/aidentoe/EcoSnap" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fake Website Project -->
+      <div class="project-card">
+        <img src="fakewebsite.png" alt="Fake Website Screenshot">
+        <div class="project-info">
+          <h3>Fake Website</h3>
+          <p>A demo website I designed and coded to showcase my creativity, design sense, and frontend skills. This project highlights layout, styling, and interactivity.</p>
+          <div class="project-links">
+            <a href="https://aidentoe.github.io/fakewebsite/" target="_blank">View Project</a>
+            <a href="https://github.com/aidentoe/fakewebsite" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
   <section id="about">
-    <div class="about-container">
-      <img src="images/profile.jpg" alt="Aiden Toe profile picture" class="profile-pic" />
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          I’m passionate about blending creativity and technology. Whether I’m building websites, 
-          experimenting with design, or hosting events, I enjoy bringing people together 
-          and creating experiences that are both functional and fun.
-        </p>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a student at St. Mary’s High School in Kitchener with a strong interest in programming, event organization, and music education. I’ve participated in two hackathons, collaborating on projects aimed at supporting students in their daily lives. Beyond my technical pursuits, I teach piano and continue to develop my skills in web design. I’m passionate about building, creating, and exploring new opportunities to grow and connect with others.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Connect</h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aiden-to-898335367/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/aiden.toe/" target="_blank">Instagram</a>
       </div>
     </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
