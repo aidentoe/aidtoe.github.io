@@ -1,129 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aiden To — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiden To - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="site-inner">
-      <div class="logo">Aiden To</div>
-
-      <nav class="nav-desktop">
-        <a href="#hero">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.linkedin.com/in/aiden-to-898335367/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.instagram.com/aiden.toe/" target="_blank" rel="noopener">Instagram</a>
-      </nav>
-
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>Aiden To</h1>
+      <p>Creative Web Developer — I design, code, and organize events</p>
+      <a href="#projects" class="btn">See My Work</a>
     </div>
+  </section>
 
-    <!-- Mobile menu (same links, toggled) -->
-    <div class="mobile-menu" aria-hidden="true">
-      <a href="#hero">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.linkedin.com/in/aiden-to-898335367/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.instagram.com/aiden.toe/" target="_blank" rel="noopener">Instagram</a>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <!-- EcoSnap -->
+      <div class="project-card">
+        <img src="ecosnap.png" alt="EcoSnap Project Screenshot">
+        <div class="project-info">
+          <h3>EcoSnap</h3>
+          <p>EcoSnap is a user-friendly web app that helps people quickly classify everyday items into recycling, compost, or garbage. Built with HTML, CSS, and JavaScript, it’s designed to make sustainability simple and accessible.</p>
+          <div class="project-links">
+            <a href="https://aidentoe.github.io/EcoSnap/" target="_blank">View Project</a>
+            <a href="https://github.com/aidentoe/EcoSnap" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fake Website -->
+      <div class="project-card">
+        <img src="fakewebsite.png" alt="Fake Website Screenshot">
+        <div class="project-info">
+          <h3>Fake Website</h3>
+          <p>A demo website I designed and coded to showcase my creativity, design sense, and frontend skills. This project highlights layout, styling, and interactivity.</p>
+          <div class="project-links">
+            <a href="https://aidentoe.github.io/fakewebsite/" target="_blank">View Project</a>
+            <a href="https://github.com/aidentoe/fakewebsite" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </header>
+  </section>
 
-  <!-- Hero -->
-  <main>
-    <section id="hero" class="hero section">
-      <div class="container">
-        <h1 class="hero-title">Aiden To</h1>
-        <p class="hero-sub">Creative Web Developer — I design, code, and organize events.</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="#projects">See My Work</a>
-          <a class="btn ghost" href="#about">About Me</a>
-        </div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-inner">
+        <img src="profile.jpg" alt="Aiden To profile photo" class="profile-pic">
+        <p>I’m a student at St. Mary’s High School in Kitchener with a strong interest in programming, event organization, and music education. I’ve participated in hackathons, collaborated on projects, and teach piano. I enjoy building, creating, and exploring new opportunities to grow and connect with others.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section projects-section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="projects-grid">
-
-          <!-- EcoSnap -->
-          <article class="project-card">
-            <div class="project-image">
-              <img src="ecosnap.png" alt="EcoSnap screenshot (replace ecosnap.png)" />
-            </div>
-            <div class="project-body">
-              <h3>EcoSnap</h3>
-              <p class="project-desc">
-                EcoSnap is a user-friendly web app that helps people quickly classify everyday items into recycling, compost, or garbage. Built with HTML, CSS and JS — designed to make sustainable choices easier.
-              </p>
-              <div class="project-links">
-                <a class="btn outline" href="https://aidentoe.github.io/EcoSnap/" target="_blank" rel="noopener">View Project</a>
-                <a class="btn" href="https://github.com/aidentoe/EcoSnap" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Fake Website -->
-          <article class="project-card">
-            <div class="project-image">
-              <img src="fakewebsite.png" alt="Fake website screenshot (replace fakewebsite.png)" />
-            </div>
-            <div class="project-body">
-              <h3>Fake Website</h3>
-              <p class="project-desc">
-                A demo site created to showcase layout, visual design and front-end interactivity — a quick playground for UI patterns and responsive techniques.
-              </p>
-              <div class="project-links">
-                <a class="btn outline" href="https://aidentoe.github.io/fakewebsite/" target="_blank" rel="noopener">View Project</a>
-                <a class="btn" href="https://github.com/aidentoe/fakewebsite" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-          </article>
-
-        </div> <!-- /.projects-grid -->
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Connect</h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aiden-to-898335367/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/aiden.toe/" target="_blank">Instagram</a>
       </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section about-section">
-      <div class="container about-inner">
-        <div class="profile-photo">
-          <img src="profile.jpg" alt="Aiden To profile photo (replace profile.jpg)" />
-        </div>
-        <div class="about-text">
-          <h2 class="section-title">About Me</h2>
-          <p>I’m a student at St. Mary’s High School in Kitchener with a strong interest in programming, event organization, and music education. I’ve participated in hackathons, collaborated on student-focused projects, and teach piano. I enjoy combining clean design with practical code to build tools people find useful.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact-section">
-      <div class="container">
-        <h2 class="section-title">Connect</h2>
-        <p class="contact-sub">Shoot me a message on LinkedIn or follow on Instagram.</p>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/aiden-to-898335367/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
-          <a href="https://www.instagram.com/aiden.toe/" target="_blank" rel="noopener" class="social-link">Instagram</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Aiden To — Built with ❤️</div>
-  </footer>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
