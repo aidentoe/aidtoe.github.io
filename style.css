@@ -1,189 +1,170 @@
-/* =====================
-   Global Styles
-===================== */
+/* Reset & Fonts */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: "Poppins", sans-serif;
-  background: #0d1117; /* Dark base */
-  color: #e6edf3;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
-/* Gradient Background Animation */
-body::before {
-  content: "";
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-  z-index: -1;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* =====================
-   Header
-===================== */
-header {
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
   text-align: center;
-  padding: 4rem 2rem;
 }
 
-header h1 {
+/* Hero Section */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d0d0d 0%, #001a33 100%);
+}
+#hero h1 {
   font-size: 3rem;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  margin-bottom: 20px;
+  color: #00aaff;
+  background: linear-gradient(90deg, #00aaff, #00cfff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-header p {
-  font-size: 1.2rem;
-  color: #c9d1d9;
-  margin-top: 0.5rem;
+#hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
 }
-
-/* =====================
-   Navigation
-===================== */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1rem 0;
-}
-
-nav a {
-  color: #58a6ff;
+#hero .btn {
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #00aaff, #005f99);
+  color: #0d0d0d;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.5s, transform 0.3s;
+}
+#hero .btn:hover {
+  background: linear-gradient(90deg, #005f99, #00cfff);
+  transform: translateY(-3px);
 }
 
-nav a:hover {
-  color: #79c0ff;
+/* Projects Section */
+#projects {
+  background-color: #111;
 }
-
-/* =====================
-   Section Layout
-===================== */
-section {
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+#projects h2 {
+  color: #00aaff;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #00aaff, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #58a6ff;
-  text-align: center;
-}
-
-/* =====================
-   About Section
-===================== */
-#about {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #c9d1d9;
-}
-
-/* =====================
-   Projects Section
-===================== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
 .project-card {
-  background: #161b22;
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 170, 255, 0.3);
 }
-
 .project-card img {
   width: 100%;
-  height: 180px;
   object-fit: cover;
 }
-
-.project-card .content {
-  padding: 1rem;
+.project-info {
+  padding: 20px;
+  text-align: left;
 }
-
-.project-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #e6edf3;
+.project-info h3 {
+  color: #00aaff;
+  margin-bottom: 10px;
 }
-
-.project-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  color: #8b949e;
+.project-info p {
+  margin-bottom: 15px;
 }
-
-.project-card a {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  background: #238636;
-  color: white;
-  border-radius: 6px;
+.project-links a {
   text-decoration: none;
-  transition: background 0.3s;
+  color: #0d0d0d;
+  background: linear-gradient(90deg, #00aaff, #005f99);
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background 0.5s, transform 0.3s;
+}
+.project-links a:hover {
+  background: linear-gradient(90deg, #005f99, #00cfff);
+  transform: translateY(-2px);
 }
 
-.project-card a:hover {
-  background: #2ea043;
+/* About Section */
+#about {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+}
+#about h2 {
+  color: #00aaff;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00aaff, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* =====================
-   Contact Section
-===================== */
+/* Contact Section */
 #contact {
-  text-align: center;
+  background-color: #111;
+}
+#contact h2 {
+  color: #00aaff;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00aaff, #00cfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.social-links a {
+  color: #00aaff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+.social-links a:hover {
+  color: #00cfff;
+  transform: translateY(-2px);
 }
 
-#contact a {
-  margin: 0 1rem;
-  font-size: 1.2rem;
-  color: #58a6ff;
-  transition: color 0.3s;
+/* Section fade-in animations */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-#contact a:hover {
-  color: #79c0ff;
-}
-
-/* =====================
-   Footer
-===================== */
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #8b949e;
+/* Responsive */
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: row;
+  }
+  .project-card img {
+    width: 50%;
+  }
 }
